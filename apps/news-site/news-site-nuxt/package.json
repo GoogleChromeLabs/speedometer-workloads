@@ -1,0 +1,35 @@
+{
+    "name": "news-site-nuxt",
+    "version": "1.0.0",
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
+    "private": true,
+    "scripts": {
+        "prepare": "node node_modules/benchmark-connector/dist/prepare.min.js",
+        "dev": "npm run prepare && nuxt dev",
+        "build": "npm run prepare && nuxt build",
+        "build:static": "npm run prepare && TARGET=static nuxt generate",
+        "start": "nuxt preview",
+        "start:static": "http-server ./dist -c-1 --cors --silent",
+        "postinstall": "nuxt prepare",
+        "lint:fix": "eslint . --fix",
+        "pretty:check": "prettier --check ./",
+        "pretty:fix": "prettier --write ./",
+        "format": "npm run pretty:fix ; npm run lint:fix"
+    },
+    "devDependencies": {
+        "@nuxt/eslint-config": "^0.1.1",
+        "@types/node": "^18",
+        "eslint": "^8.41.0",
+        "nuxt": "^3.8.1",
+        "prettier": "^2.8.8"
+    },
+    "dependencies": {
+        "benchmark-connector": "workspace: *",
+        "http-server": "^14.1.1",
+        "news-site-css": "workspace:*"
+    }
+}

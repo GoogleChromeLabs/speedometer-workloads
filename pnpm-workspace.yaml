@@ -1,0 +1,5 @@
+packages:
+  # applications
+  - 'apps/**/*'
+  # packages
+  - 'packages/**/*'

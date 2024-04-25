@@ -1,0 +1,37 @@
+{
+  "name": "speedometer-workloads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format:packages": "pnpm -F './packages/**' format",
+    "build:apps": "pnpm -F './apps/**' build:static",
+    "build:packages": "pnpm -F './packages/**' build",
+    "move:apps": "pnpm -F workloads-manager move --output='../../../.workloads'",
+    "move:apps:desktop": "pnpm -F workloads-manager move --output='~/Desktop/workloads'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "workspaces": [
+    "packages/styles/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "fs-extra": "^10.1.0",
+    "globby": "^11.1.0"
+  },
+  "peerDependencies": {
+    "fs-extra": "^10.1.0",
+    "globby": "^11.1.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "postcss@<8.4.31": ">=8.4.31",
+      "next@>=0.9.9 <13.4.20-canary.13": ">=13.4.20-canary.13",
+      "follow-redirects@<=1.15.5": ">=1.15.6",
+      "zod@<=3.22.2": ">=3.22.3",
+      "webpack-dev-middleware@<=5.3.3": ">=5.3.4"
+    }
+  }
+}

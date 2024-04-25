@@ -1,0 +1,29 @@
+{
+    "name": "editor-tiptap",
+    "version": "1.0.0",
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "prepare": "HOST='./' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "dev": "npm run prepare && vite",
+        "build:static": "npm run prepare && vite build",
+        "start:static": "http-server ./dist -c-1 --cors --silent"
+    },
+    "devDependencies": {
+        "@codemirror/lang-javascript": "^6.1.4",
+        "@tiptap/core": "^2.0.0-beta.217",
+        "@tiptap/starter-kit": "^2.0.0-beta.217",
+        "benchmark-connector": "workspace: *",
+        "codemirror": "^6.0.1",
+        "vite": "^4.1.0"
+    },
+    "dependencies": {
+        "@codemirror/state": "^6.4.1",
+        "http-server": "^14.1.1"
+    }
+}

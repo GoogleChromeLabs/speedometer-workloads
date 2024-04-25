@@ -1,0 +1,43 @@
+{
+    "name": "todomvc-vue",
+    "version": "1.0.0",
+    "author": "Thorsten Kober",
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
+    "private": true,
+    "scripts": {
+        "prepare": "HOST='./public' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "sanitize": "OUTPUT_FOLDER=./dist node node_modules/sanitize-language/dist/index.min.js",
+        "dev": "npm run start",
+        "build:static": "vue-cli-service build && npm run sanitize",
+        "start": "vue-cli-service serve",
+        "start:static": "http-server ./dist -c-1 --cors --silent"
+    },
+    "dependencies": {
+        "benchmark-connector": "workspace: *",
+        "core-js": "^3.8.3",
+        "http-server": "^14.1.1",
+        "todomvc-app-css": "^2.4.2",
+        "vue": "^3.2.47",
+        "vue-router": "^4.1.6"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.16",
+        "@babel/eslint-parser": "^7.12.16",
+        "@vue/cli-plugin-babel": "~5.0.0",
+        "@vue/cli-plugin-eslint": "~5.0.0",
+        "@vue/cli-service": "~5.0.0",
+        "eslint": "^7.32.0",
+        "eslint-plugin-vue": "^8.0.3",
+        "sanitize-language": "workspace:*"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead",
+        "not ie 11"
+    ]
+}

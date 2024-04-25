@@ -1,0 +1,34 @@
+{
+  "name": "benchmark-connector",
+  "version": "1.0.0",
+  "description": "A script to connect a workload to a benchmark.",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.13.0",
+    "npm": ">=8.19.3"
+  },
+  "private": true,
+  "scripts": {
+    "lint": "eslint scripts/*",
+    "lint:fix": "npm run lint -- --fix",
+    "pretty": "prettier scripts/* --check",
+    "pretty:fix": "npm run pretty -- --write",
+    "format": "npm run pretty:fix && npm run lint:fix",
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "fs-extra": "^11.1.1",
+    "globby": "^13.2.0",
+    "prettier": "^2.8.8",
+    "rollup": "^3.23.0",
+    "rollup-copy-files": "workspace:*",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "terser": "^5.29.2"
+  },
+  "files": [
+    "/dist"
+  ]
+}

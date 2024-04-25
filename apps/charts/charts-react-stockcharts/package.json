@@ -1,0 +1,44 @@
+{
+    "name": "charts-react-stockcharts",
+    "version": "1.0.0",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
+    "private": true,
+    "scripts": {
+        "prepare": "HOST='./public' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "dev": "react-scripts start",
+        "build:static": "npm run prepare && rm -rf dist && BUILD_PATH='./dist' react-scripts build",
+        "start:static": "http-server ./dist -c-1 --cors --silent"
+    },
+    "homepage": "./",
+    "dependencies": {
+        "benchmark-connector": "workspace: *",
+        "http-server": "^14.1.1"
+    },
+    "devDependencies": {
+        "d3-dsv": "1.0.8",
+        "d3-format": "1.2.1",
+        "d3-scale": "1.0.7",
+        "d3-time-format": "2.1.1",
+        "prop-types": "15.6.0",
+        "raw-loader": "4.0.2",
+        "react": "16.14.0",
+        "react-dom": "16.14.0",
+        "react-scripts": "5.0.1",
+        "react-stockcharts": "0.7.8"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
