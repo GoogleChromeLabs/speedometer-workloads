@@ -1,0 +1,31 @@
+{
+    "name": "todomvc-backbone",
+    "version": "1.0.0",
+    "author": "Thorsten Kober",
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
+    "private": true,
+    "scripts": {
+        "prepare": "HOST='./' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "dev": "npm run prepare && http-server ./ -c-1 --cors -o",
+        "build:static": "npm run prepare && node scripts/build.js",
+        "start:static": "http-server ./dist -c-1 --cors --silent"
+    },
+    "dependencies": {
+        "backbone": "^1.4.1",
+        "benchmark-connector": "workspace: *",
+        "http-server": "^14.1.1",
+        "jquery": "^3.6.4",
+        "todomvc-app-css": "^2.4.2",
+        "underscore": "^1.13.6"
+    },
+    "devDependencies": {
+        "app-build-scripts": "workspace:*"
+    },
+    "files": [
+        "/dist"
+      ]
+}

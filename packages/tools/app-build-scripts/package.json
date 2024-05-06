@@ -1,0 +1,31 @@
+{
+  "name": "app-build-scripts",
+  "version": "1.0.0",
+  "description": "A collection of scripts for a simple build setup.",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.13.0",
+    "npm": ">=8.19.3"
+  },
+  "private": true,
+  "scripts": {
+    "lint": "eslint index.js",
+    "lint:fix": "npm run lint -- --fix",
+    "pretty": "prettier index.js --check",
+    "pretty:fix": "npm run pretty -- --write",
+    "format": "npm run pretty:fix && npm run lint:fix",
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.3",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^2.8.8",
+    "rollup": "^3.23.0",
+    "rollup-plugin-cleaner": "^1.0.0"
+  },
+  "files": [
+    "/dist"
+  ]
+}

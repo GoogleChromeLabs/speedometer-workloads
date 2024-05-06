@@ -1,0 +1,33 @@
+{
+    "name": "todomvc-svelte",
+    "version": "1.0.0",
+    "author": "Thorsten Kober",
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
+    "private": true,
+    "type":"module",
+    "scripts": {
+        "prepare": "HOST='./public' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "watch": "rollup -c -w",
+        "dev": "npm run start:static & npm run watch",
+        "build:static": "rollup -c",
+        "start:static": "http-server ./dist -c-1 --cors --silent"
+    },
+    "dependencies": {
+        "@rollup/plugin-terser": "^0.4.4",
+        "benchmark-connector": "workspace: *",
+        "http-server": "^14.1.1",
+        "todomvc-app-css": "^2.4.2"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^15.0.2",
+        "rollup-plugin-copy": "^3.4.0",
+        "rollup-plugin-filesize": "^10.0.0",
+        "rollup-plugin-import-css": "^3.2.1",
+        "rollup-plugin-svelte": "^7.1.4",
+        "svelte": "^3.58.0"
+    }
+}

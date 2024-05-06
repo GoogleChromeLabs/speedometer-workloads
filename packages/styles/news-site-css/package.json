@@ -1,0 +1,32 @@
+{
+  "name": "news-site-css",
+  "version": "1.0.0",
+  "author": "Thorsten Kober",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+      "node": ">=18.13.0",
+      "npm": ">=8.19.3"
+  },
+  "private": true,
+  "scripts": {
+    "lint": "stylelint \"src/css/*.css\"",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "npm run lint:fix",
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.1.1",
+    "globby": "^13.2.0",
+    "rollup": "^3.23.0",
+    "rollup-constructable-css": "workspace:*",
+    "rollup-copy-files": "workspace:*",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-import-css": "^3.2.1",
+    "strip-comments": "^2.0.1",
+    "stylelint": "^15.6.2",
+    "stylelint-config-standard": "^33.0.0"
+  },
+  "files": [
+    "/dist"
+  ]
+}

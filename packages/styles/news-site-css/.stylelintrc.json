@@ -1,0 +1,8 @@
+{
+    "extends": ["stylelint-config-standard"],
+    "rules": {
+        "media-feature-range-notation": null,
+        "selector-not-notation": null,
+        "selector-id-pattern": null
+    }
+}

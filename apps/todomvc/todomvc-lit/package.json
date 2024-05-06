@@ -1,0 +1,124 @@
+{
+    "name": "todomvc-lit",
+    "version": "1.0.0",
+    "author": "Peter Burns",
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
+    "private": true,
+    "scripts": {
+        "prepare": "wireit",
+        "dev": "wireit",
+        "build:static": "wireit",
+        "start:static": "http-server ./dist -c-1 --cors --silent",
+        "tsc": "wireit",
+        "rollup": "wireit",
+        "copy-index-html": "wireit"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^15.1.0",
+        "@rollup/plugin-terser": "^0.4.3",
+        "@rollup/plugin-typescript": "^11.1.1",
+        "rollup": "^2.79.1",
+        "rollup-plugin-minify-html-literals": "^1.2.6",
+        "@web/dev-server": "^0.2.1",
+        "typescript": "^5.0.4",
+        "wireit": "^0.9.5"
+    },
+    "dependencies": {
+        "benchmark-connector": "workspace: *",
+        "http-server": "^14.1.1",
+        "lit": "^3.0.0-pre.0",
+        "tslib": "^2.5.2"
+    },
+    "wireit": {
+        "start:static": {
+            "dependencies": [
+                "build:static"
+            ],
+            "files": [
+                "web-dev-server.config.mjs"
+            ],
+            "service": true,
+            "command": "wds"
+        },
+        "dev": {
+            "#comment": "like serve, only it doesn't do the slow rollup build",
+            "dependencies": [
+                "tsc",
+                "prepare"
+            ],
+            "files": [
+                "web-dev-server.config.mjs"
+            ],
+            "service": true,
+            "command": "wds"
+        },
+        "build:static": {
+            "dependencies": [
+                "tsc",
+                "rollup",
+                "prepare",
+                "copy-index-html",
+                "copy-benchmark-connector",
+                "copy-favicon"
+            ]
+        },
+        "tsc": {
+            "files": [
+                "src/**/*.ts",
+                "tsconfig.json"
+            ],
+            "output": [
+                "index.js",
+                "index.js.map",
+                "lib",
+                ".tsbuildinfo"
+            ],
+            "clean": false,
+            "command": "tsc"
+        },
+        "rollup": {
+            "files": [
+                "src/**/*.ts",
+                "rollup.config.mjs"
+            ],
+            "output": [
+                "dist/index.js"
+            ],
+            "command": "rollup --config rollup.config.mjs"
+        },
+        "copy-index-html": {
+            "command": "cp index.html dist/index.html",
+            "files": [
+                "index.html"
+            ],
+            "output": [
+                "dist/index.html"
+            ]
+        },
+        "copy-benchmark-connector": {
+            "command": "cp benchmark-connector.min.js dist/benchmark-connector.min.js",
+            "files": [
+                "benchmark-connector.min.js"
+            ],
+            "output": [
+                "dist/benchmark-connector.min.js"
+            ]
+        },
+        "copy-favicon": {
+            "command": "cp favicon.ico dist/favicon.ico",
+            "files": [
+                "favicon.ico"
+            ],
+            "output": [
+                "dist/favicon.ico"
+            ]
+        },
+        "prepare": {
+            "command": "HOST='./' node node_modules/benchmark-connector/dist/prepare.min.js"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "todomvc-web-components",
+    "version": "1.0.0",
+    "author": "Thorsten Kober",
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
+    "private": true,
+    "scripts": {
+        "prepare": "HOST='./' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "dev": "npm run prepare && http-server ./ -c-1 --cors -o",
+        "build:static": "npm run prepare && node scripts/build.js",
+        "start:static": "http-server ./dist -c-1 --cors --silent"
+    },
+    "dependencies": {
+        "benchmark-connector": "workspace: *",
+        "http-server": "^14.1.1",
+        "todomvc-css": "workspace:*"
+    },
+    "devDependencies": {
+        "app-build-scripts": "workspace:*"
+    }
+}

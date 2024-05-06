@@ -1,0 +1,6 @@
+node_modules
+.DS_Store
+.angular
+.next
+.nuxt
+.output

@@ -1,0 +1,18 @@
+# system
+.DS_Store
+
+# dependencies
+node_modules
+
+# angular
+.angular
+
+# next.js
+.next
+
+# nuxt
+.nuxt
+.output
+
+# aurora-workloads
+.workloads

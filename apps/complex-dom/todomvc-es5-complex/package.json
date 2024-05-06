@@ -1,0 +1,23 @@
+{
+    "name": "todomvc-es5-complex",
+    "version": "1.0.0",
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
+    "private": true,
+    "scripts": {
+        "prepare": "HOST='./dist' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "build:static": "node scripts/build.js && npm run prepare",
+        "start:static": "http-server ./dist -c-1 --cors --silent"
+    },
+    "devDependencies": {
+        "big-dom-generator": "workspace:*",
+        "todomvc-es5": "workspace:*"
+    },
+    "dependencies": {
+        "benchmark-connector": "workspace: *",
+        "http-server": "^14.1.1"
+    }
+}

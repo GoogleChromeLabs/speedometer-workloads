@@ -1,0 +1,160 @@
+{
+    "ports": [8081],
+    "workloads": [
+        { 
+            "name": "charts-chartjs",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "charts-observable-plot",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        {
+            "name": "charts-react-stockcharts",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "editors-codemirror",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "editors-tiptap",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "news-site-next",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        {
+            "name": "news-site-nuxt",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-angular",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-backbone",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-es5",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-es6-webpack",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-jquery",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-lit",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-preact",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-react",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-react-redux",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-svelte",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-vue",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-web-components",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-angular-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-backbone-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-es5-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-es6-webpack-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-jquery-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-lit-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-preact-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-react-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-react-redux-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-svelte-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-vue-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-web-components-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        }
+    ]
+}
