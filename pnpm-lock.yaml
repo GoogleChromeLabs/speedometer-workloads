@@ -310,6 +310,15 @@ importers:
         specifier: workspace:*
         version: link:../../todomvc/todomvc-web-components
 
+  apps/dashboards/perf.webkit.org:
+    dependencies:
+      benchmark-connector:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/benchmark-connector
+      http-server:
+        specifier: ^14.1.1
+        version: 14.1.1
+
   apps/editors/editors-codemirror:
     dependencies:
       '@codemirror/state':
