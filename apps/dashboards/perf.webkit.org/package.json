@@ -9,10 +9,14 @@
     "scripts": {
         "prepare": "HOST='./public/v3' node node_modules/benchmark-connector/dist/prepare.min.js",
         "dev": "npm run prepare && http-server ./public -c-1 --cors -o",
-        "start:static": "http-server ./public -c-1 --cors --silent"
+        "build:static": "npm run prepare && node scripts/build.js",
+        "start:static": "http-server ./dist -c-1 --cors --silent"
     },
     "dependencies": {
         "benchmark-connector": "workspace: *",
         "http-server": "^14.1.1"
+    },
+    "devDependencies": {
+        "app-build-scripts": "workspace:*"
     }
 }

@@ -318,6 +318,10 @@ importers:
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
+    devDependencies:
+      app-build-scripts:
+        specifier: workspace:*
+        version: link:../../../packages/tools/app-build-scripts
 
   apps/editors/editors-codemirror:
     dependencies:

@@ -265,6 +265,7 @@ Webkit Perf-Dashboard is an application used to track various performance metric
 
 ```bash
 pnpm -F perf.webkit.org dev
+pnpm -F perf.webkit.org build:static
 pnpm -F perf.webkit.org start:static
 ```
 
