@@ -10,7 +10,6 @@ This repo contains two distinct directories, which groups containing projects in
 
  - [Development](#development)
     - [How to run a workload](#how-to-run-a-workload)
-    - [How to run default workloads](#how-to-run-default-workloads)
     - [Available workload scripts](#available-workload-scripts)
     - [Workload-Benchmark communication](#workload-benchmark-communication)
     - [How to build all workloads](#how-to-build-all-workloads)
@@ -57,14 +56,6 @@ For example to run the `news-site-next` app in development mode, the following c
 
 ```bash
 pnpm -F news-site-next dev
-```
-
-### How to run default workloads
-
-See [Workloads Manager](#workloads-manager).
-
-```bash
-pnpm -F workloads-manager start
 ```
 
 ### Available Workload scripts
