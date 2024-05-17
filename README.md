@@ -13,6 +13,7 @@ This repo contains two distinct directories, which groups containing projects in
     - [Available workload scripts](#available-workload-scripts)
     - [Workload-Benchmark communication](#workload-benchmark-communication)
     - [How to build all workloads](#how-to-build-all-workloads)
+    - [How to copy and move all workloads](#how-to-copy-all-workloads-files)
  - [Workloads](#workloads)
     - [Charts](#charts)
     - [Complex Dom](#complex-dom)
