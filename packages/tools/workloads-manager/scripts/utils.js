@@ -21,7 +21,6 @@ const excludeList = [
   "docs",
   "node_modules",
   "packages",
-  "public",
 ];
 
 /**
