@@ -126,6 +126,7 @@ Main directory for all workloads, which are grouped by categories:
 
 - `charts`: Various charting apps.
 - `complex-dom`: TodoMvc apps wrapped in a complex dom.
+- `dashboards`: Various dashboard apps.
 - `editors`: Various editing apps.
 - `news-site`: Various versions of a news site.
 - `todomvc`: Various versions of a todo application.
