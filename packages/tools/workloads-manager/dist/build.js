@@ -1,5 +1,5 @@
 const path = require("path");
-const { findDirectories, executeScriptSync } = require("./utils");
+const { findDirectories, executeScriptSync, getArguments } = require("./utils");
 
 const buildScripts = {
   static: "build:static",
@@ -7,7 +7,7 @@ const buildScripts = {
 
 /**
  * build
- * 
+ *
  * Function to build all apps, by scanning the apps folder for nested apps to run a build script on.
  */
 async function build() {
@@ -18,7 +18,7 @@ async function build() {
   // Name of the root directory - "aurora-workloads".
   const root = path.basename(path.resolve(start));
   // build to run (build, build:static, ect..).
-  const type = process.env.TYPE ?? 'static';
+  const { type } = getArguments({ args: process.argv }) ?? "static";
   const script = buildScripts[type];
 
   const directories = await findDirectories({ start, target, root });

@@ -1,13 +1,13 @@
 /**
  * showLoadingAnimation
- * 
+ *
  * Loading animation that displays in your terminal.
- * 
+ *
  * @param {Object} config - Config object for function to run.
  * @param {string} text - Text to display while loading.
  * @param {string[]} chars - Array of string characters to use for animation.
  * @param {number} delay - How quickly the animation should play.
- * @returns {number} 
+ * @returns {number}
  */
 function showLoadingAnimation({
   text = "",
