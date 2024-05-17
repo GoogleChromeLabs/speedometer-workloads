@@ -9,4 +9,5 @@ The `TYPE` environment variable determines which build script to run on all work
 
 ## move
 
-The [move script](./scripts/move.js) copies all `dist` folders of all workloads to a new directory.
+The [move script](./scripts/move.js) copies all `dist` folders of all workloads to a new directory. The default directory is called `.workloads` in the root of the monorepo.
+The [workloads.config.folder.json](./workloads.config.folder.json) is used to determine which apps to copy over.
