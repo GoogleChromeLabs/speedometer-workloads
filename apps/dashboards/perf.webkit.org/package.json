@@ -7,8 +7,8 @@
     },
     "private": true,
     "scripts": {
-        "prepare": "HOST='./public' node node_modules/benchmark-connector/dist/prepare.min.js",
-        "dev": "npm run prepare && http-server ./ -c-1 --cors -o",
+        "prepare": "HOST='./public/v3' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "dev": "npm run prepare && http-server ./public -c-1 --cors -o",
         "start:static": "http-server ./public -c-1 --cors --silent"
     },
     "dependencies": {
