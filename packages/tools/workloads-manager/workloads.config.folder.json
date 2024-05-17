@@ -15,8 +15,7 @@
         },
         {
             "name": "perf.webkit.org",
-            "type": "static",
-            "distDirectory": "/public"
+            "type": "static"
         },
         { 
             "name": "editors-codemirror",
