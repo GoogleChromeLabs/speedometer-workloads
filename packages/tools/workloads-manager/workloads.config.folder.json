@@ -13,6 +13,11 @@
             "name": "charts-react-stockcharts",
             "type": "static"
         },
+        {
+            "name": "perf.webkit.org",
+            "type": "static",
+            "distDirectory": "/public"
+        },
         { 
             "name": "editors-codemirror",
             "type":"static"
