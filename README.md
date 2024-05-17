@@ -17,6 +17,7 @@ This repo contains two distinct directories, which groups containing projects in
  - [Workloads](#workloads)
     - [Charts](#charts)
     - [Complex Dom](#complex-dom)
+    - [Dashboards](#dashboards)
     - [Editors](#editors)
     - [News Site](#news-site)
     - [TodoMVC](#todomvc)
