@@ -524,5 +524,6 @@ Manages all workloads, by using the following commands:
 ```bash
 pnpm -F workloads-manager format
 pnpm -F workloads-manager build
+pnpm -F workloads-manager build:apps
 pnpm -F workloads-manager move
 ```
