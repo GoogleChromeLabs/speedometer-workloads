@@ -111,6 +111,15 @@ To run the build script on all apps, the following command can be used:
 pnpm run build:apps
 ```
 
+### How to copy all workloads files
+
+To create a copy of all `dist` folders of all apps, the following commands can be used:
+
+```bash
+pnpm run move:apps
+pnpm run move:apps:desktop
+```
+
 ## Workloads
 
 Main directory for all workloads, which are grouped by categories:
