@@ -111,12 +111,22 @@ To run the build script on all apps, the following command can be used:
 pnpm run build:apps
 ```
 
+### How to copy all workloads files
+
+To create a copy of all `dist` folders of all apps, the following commands can be used:
+
+```bash
+pnpm run move:apps
+pnpm run move:apps:desktop
+```
+
 ## Workloads
 
 Main directory for all workloads, which are grouped by categories:
 
 - `charts`: Various charting apps.
 - `complex-dom`: TodoMvc apps wrapped in a complex dom.
+- `dashboards`: Various dashboard apps.
 - `editors`: Various editing apps.
 - `news-site`: Various versions of a news site.
 - `todomvc`: Various versions of a todo application.
@@ -261,6 +271,11 @@ pnpm -F todomvc-web-components-complex start:static
 #### perf.webkit.org
 
 Webkit Perf-Dashboard is an application used to track various performance metrics of WebKit. The dashboard uses canvas drawing and web components for its ui.
+
+```bash
+pnpm -F perf.webkit.org dev
+pnpm -F perf.webkit.org start:static
+```
 
 ### Editors
 
@@ -515,34 +530,8 @@ pnpm -F sanitize-language build
 
 Manages all workloads, by using the following commands:
 
--   connect: waits for a connection on all ports from the workloads.config.json file.
--   start: starts node server for static workloads from the workloads.config.json file.
-
 ```bash
 pnpm -F workloads-manager format
 pnpm -F workloads-manager build
-pnpm -F workloads-manager connect
-pnpm -F workloads-manager start
-```
-
-The workloads manager depends on a `workloads.config.json` file, which contains a list of apps to run.
-
-- The `ports` key is a list of ports to start a server on.
-- The `workloads` key contains an array of workloads.
-
-Each workload contains the following keys:
-- `name`: Package name of the workload.
-- `type`: Build type, to determine how to run it Currently only `static` is supported.
-
-```json
-{
-    "ports": [8080, 8081]
-    "workloads": [
-        { 
-            "name": "news-site-next",
-            "type": "static",
-            
-        }
-    ]
-}
+pnpm -F workloads-manager move
 ```
