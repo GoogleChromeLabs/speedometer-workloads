@@ -272,6 +272,11 @@ pnpm -F todomvc-web-components-complex start:static
 
 Webkit Perf-Dashboard is an application used to track various performance metrics of WebKit. The dashboard uses canvas drawing and web components for its ui.
 
+```bash
+pnpm -F perf.webkit.org dev
+pnpm -F perf.webkit.org start:static
+```
+
 ### Editors
 
 Editors, for example WYSIWYG text and code editors, let us focus on editing live text and capturing form interactions. Typical scenarios are writing an email, logging into a website or filling out an online form.
