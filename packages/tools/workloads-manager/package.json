@@ -17,13 +17,7 @@
     "format": "npm run pretty:fix && npm run lint:fix",
     "build": "rollup -c --bundleConfigAsCjs",
     "build:apps": "node scripts/build.js --type='static'",
-    "connect": "node scripts/connect.js --data='./workloads.config.folder.json'",
-    "move": "node scripts/move.js --data='./workloads.config.folder.json'",
-    "start:domain": "node scripts/start.domain.js --data='./workloads.config.domain.json'",
-    "start:folder": "node scripts/start.folder.js --data='./workloads.config.folder.json'",
-    "start:ports": "node scripts/start.ports.js --data='./workloads.config.ports.json'",
-    "start:all": "node scripts/start.all.js",
-    "start": "npm run start:folder"
+    "move": "node scripts/move.js --data='./workloads.config.folder.json'"
   },
   "devDependencies": {
     "eslint": "^8.57.0",

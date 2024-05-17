@@ -515,34 +515,7 @@ pnpm -F sanitize-language build
 
 Manages all workloads, by using the following commands:
 
--   connect: waits for a connection on all ports from the workloads.config.json file.
--   start: starts node server for static workloads from the workloads.config.json file.
-
 ```bash
 pnpm -F workloads-manager format
 pnpm -F workloads-manager build
-pnpm -F workloads-manager connect
-pnpm -F workloads-manager start
-```
-
-The workloads manager depends on a `workloads.config.json` file, which contains a list of apps to run.
-
-- The `ports` key is a list of ports to start a server on.
-- The `workloads` key contains an array of workloads.
-
-Each workload contains the following keys:
-- `name`: Package name of the workload.
-- `type`: Build type, to determine how to run it Currently only `static` is supported.
-
-```json
-{
-    "ports": [8080, 8081]
-    "workloads": [
-        { 
-            "name": "news-site-next",
-            "type": "static",
-            
-        }
-    ]
-}
 ```
