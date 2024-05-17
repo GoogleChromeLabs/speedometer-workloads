@@ -1,3 +1,5 @@
+# Perf.Webkit.Org
+
 ## Description
 
 This benchmark content was created out of [WebKit's performance dashboard](https://perf.webkit.org/).
@@ -14,7 +16,7 @@ This benchmark content was created out of [WebKit's performance dashboard](https
 
 The test simulates a real-world user flow by loading "Charts" page with a few charts, selecting a few data points, and selecting a time range.
 
-## Developer Documentation
+## Implementation details
 
 The app was ported from https://github.com/WebKit/WebKit/tree/main/Websites/perf.webkit.org after removing non-essential files
 and scraping JSON files off of https://perf.webkit.org/ and substituting RemoteAPI.sendHttpRequest in mockAPIs.
@@ -26,3 +28,26 @@ Speedometer specific content is in index.html and main.js between "// BEGIN - Sp
 ./tools/bundle-v3-scripts.py is used to generate public/v3/bundled-scripts.js, which is a minified script file.
 
 The tested URL was constructed by adding StyleBench charts for mac-ventura results on https://perf.webkit.org/: https://perf.webkit.org/v3/#/charts?since=1678991819934&paneList=((55-1649-53731881-null-(5-2.5-500))-(55-1407-null-null-(5-2.5-500))-(55-1648-null-null-(5-2.5-500))-(55-1974-null-null-(5-2.5-500)))
+
+## Requirements
+
+The only requirement is an installation of Node, to be able to install dependencies and run scripts to serve a local server.
+
+```
+* Node (min version: 18.13.0)
+* NPM (min version: 8.19.3)
+```
+
+## Local preview
+
+```
+terminal:
+1. npm install
+2. npm run dev
+
+browser:
+1. http://127.0.0.1:8080/v3/#/charts/?since=1678991819934&paneList=((55-1974-null-null-(5-2.5-500)))
+2. open developer console
+3. type in: startTest();
+4. type in: serviceRAF();
+```
