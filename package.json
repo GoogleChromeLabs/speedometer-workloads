@@ -8,7 +8,8 @@
     "build:apps": "pnpm -F './apps/**' build:static",
     "build:packages": "pnpm -F './packages/**' build",
     "move:apps": "pnpm -F workloads-manager move --output='../../../.workloads'",
-    "move:apps:desktop": "pnpm -F workloads-manager move --output='~/Desktop/workloads'"
+    "move:apps:desktop": "pnpm -F workloads-manager move --output='~/Desktop/workloads'",
+    "move:apps:root": "pnpm -F workloads-manager move --output='../../../../../../workloads'"
   },
   "keywords": [],
   "author": "",
