@@ -1,5 +1,5 @@
 {
-  "name": "speedometer-workloads",
+  "name": "@tkober/speedometer-workloads",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
