@@ -27,8 +27,5 @@
     "rollup-copy-files": "workspace:*",
     "rollup-plugin-cleaner": "^1.0.0",
     "terser": "^5.29.2"
-  },
-  "files": [
-    "/dist"
-  ]
+  }
 }

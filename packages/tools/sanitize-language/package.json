@@ -24,8 +24,5 @@
     "prettier": "^2.8.8",
     "rollup": "^3.23.0",
     "rollup-plugin-cleaner": "^1.0.0"
-  },
-  "files": [
-    "/dist"
-  ]
+  }
 }
