@@ -100,6 +100,7 @@ Run tools/bundle-v3-scripts to speed up the load time for production.`);
 
                     const script = document.createElement('script');
                     script.src = "benchmark-connector.min.js";
+                    script.type = "module";
                     document.body.appendChild(script);
                     await promise;
                 }
