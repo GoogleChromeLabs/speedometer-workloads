@@ -18392,8 +18392,18 @@ document.getElementById("airport-group-size-input").addEventListener("input", on
 onGroupSizeInputChange();
 window.name = "charts-observable-plot";
 window.version = "1.0.0";
+window.requestIdleCallback = window.requestIdleCallback || function(e) {
+  var a2 = Date.now();
+  return setTimeout(function() {
+    e({ didTimeout: false, timeRemaining: function() {
+      return Math.max(0, 50 - (Date.now() - a2));
+    } });
+  }, 1);
+}, window.cancelIdleCallback = window.cancelIdleCallback || function(e) {
+  clearTimeout(e);
+};
 const appId = window.name && window.version ? `${window.name}-${window.version}` : -1;
-window.onmessage = async (a2) => {
-  a2.data.id === appId && a2.data.type;
-}, window.top.postMessage({ type: "app-ready", status: "success", appId }, "*"), console.log(`Hello, benchmark connector for ${appId} is ready!`);
-//# sourceMappingURL=index-63951bde.js.map
+window.onmessage = async (e) => {
+  e.data.id === appId && e.data.type;
+}, window.requestIdleCallback(() => window.top.postMessage({ type: "app-ready", status: "success", appId }, "*")), console.log(`Hello, benchmark connector for ${appId} is ready!`);
+//# sourceMappingURL=index-a758f870.js.map

@@ -1,3 +1,24 @@
+// Polyfill
+window.requestIdleCallback =
+    window.requestIdleCallback ||
+    function (cb) {
+        var start = Date.now();
+        return setTimeout(function () {
+            cb({
+                didTimeout: false,
+                timeRemaining: function () {
+                    return Math.max(0, 50 - (Date.now() - start));
+                },
+            });
+        }, 1);
+    };
+
+window.cancelIdleCallback =
+    window.cancelIdleCallback ||
+    function (id) {
+        clearTimeout(id);
+    };
+
 /************************************************************************
  * Benchmark Connector
  *
@@ -10,14 +31,14 @@
  *************************************************************************/
 
 const appId =
-  window.name && window.version ? `${window.name}-${window.version}` : -1;
+    window.name && window.version ? `${window.name}-${window.version}` : -1;
 
 window.onmessage = async (event) => {
-  // ensure we only let legit functions run...
-  if (event.data.id !== appId || event.data.type !== "benchmark-connector")
-    return;
+    // ensure we only let legit functions run...
+    if (event.data.id !== appId || event.data.type !== "benchmark-connector")
+        return;
 };
 
-window.top.postMessage({ type: "app-ready", status: "success", appId }, "*");
+window.requestIdleCallback(() => window.top.postMessage({ type: "app-ready", status: "success", appId }, "*"));
 
 console.log(`Hello, benchmark connector for ${appId} is ready!`);

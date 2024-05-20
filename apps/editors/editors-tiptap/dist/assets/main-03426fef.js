@@ -17437,8 +17437,18 @@ function scroll() {
 }
 window.name = "editor-tiptap";
 window.version = "1.0.0";
+window.requestIdleCallback = window.requestIdleCallback || function(e) {
+  var a = Date.now();
+  return setTimeout(function() {
+    e({ didTimeout: false, timeRemaining: function() {
+      return Math.max(0, 50 - (Date.now() - a));
+    } });
+  }, 1);
+}, window.cancelIdleCallback = window.cancelIdleCallback || function(e) {
+  clearTimeout(e);
+};
 const appId = window.name && window.version ? `${window.name}-${window.version}` : -1;
-window.onmessage = async (a) => {
-  a.data.id === appId && a.data.type;
-}, window.top.postMessage({ type: "app-ready", status: "success", appId }, "*"), console.log(`Hello, benchmark connector for ${appId} is ready!`);
-//# sourceMappingURL=main-897a085e.js.map
+window.onmessage = async (e) => {
+  e.data.id === appId && e.data.type;
+}, window.requestIdleCallback(() => window.top.postMessage({ type: "app-ready", status: "success", appId }, "*")), console.log(`Hello, benchmark connector for ${appId} is ready!`);
+//# sourceMappingURL=main-03426fef.js.map
