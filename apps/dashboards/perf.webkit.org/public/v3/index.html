@@ -92,9 +92,9 @@ Run tools/bundle-v3-scripts to speed up the load time for production.`);
                     const promise = new Promise((resolve) => {
                         startTest = resolve;
                     });
-                    const div = document.createElement('div');
-                    div.id = 'app-is-ready';
-                    document.body.appendChild(div);
+                    const script = document.createElement('script');
+                    script.src = "benchmark-connector.min.js";
+                    document.body.appendChild(script);
                     await promise;
                 }
                 path = path.replaceAll('\u003f', '-').replaceAll('\u0026', '-');
@@ -204,7 +204,6 @@ Run tools/bundle-v3-scripts to speed up the load time for production.`);
         <script src="main.js"></script>
     </template>
     <script src="bundled-scripts.js" onerror="loadUnbundledScripts()"></script>
-    <script src="benchmark-connector.min.js"></script>
 </head>
 <body>
 </body>
