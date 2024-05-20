@@ -19,6 +19,9 @@ const headConfig = {
             name: "description",
             content: "A news site developed with Nuxt.",
         },
+    ],
+    script: [
+        { src: "./benchmark-connector.min.js", tagPosition: "bodyClose" },
     ]
 };
 
