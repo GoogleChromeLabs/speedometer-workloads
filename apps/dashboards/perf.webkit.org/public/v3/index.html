@@ -92,6 +92,12 @@ Run tools/bundle-v3-scripts to speed up the load time for production.`);
                     const promise = new Promise((resolve) => {
                         startTest = resolve;
                     });
+                    
+                    // [todo]: remove div if we listen for postMessage
+                    const div = document.createElement('div');
+                    div.id = 'app-is-ready';
+                    document.body.appendChild(div);
+
                     const script = document.createElement('script');
                     script.src = "benchmark-connector.min.js";
                     document.body.appendChild(script);
