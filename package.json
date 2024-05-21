@@ -35,5 +35,8 @@
       "zod@<=3.22.2": ">=3.22.3",
       "webpack-dev-middleware@<=5.3.3": ">=5.3.4"
     }
+  },
+  "dependencies": {
+    "semver": "^7.6.2"
   }
 }
