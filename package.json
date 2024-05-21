@@ -10,7 +10,10 @@
     "move:apps": "pnpm -F workloads-manager move --output='../../../.workloads'",
     "move:apps:desktop": "pnpm -F workloads-manager move --output='~/Desktop/workloads'",
     "move:apps:root": "pnpm -F workloads-manager move:default --output='../../../../../../workloads'",
-    "move:apps:custom": "pnpm -F workloads-manager move:custom --data='../../../../../../workloads.config.folder.json' --output='../../../../../../workloads'"
+    "move:apps:custom": "pnpm -F workloads-manager move:custom --data='../../../../../../workloads.config.folder.json' --output='../../../../../../workloads'",
+    "release:major": "npm version $(semver $npm_package_version -i major) && pnpm publish --tag latest && git push",
+    "release:minor": "npm version $(semver $npm_package_version -i minor) && pnpm publish --tag latest && git push",
+    "release:patch": "npm version $(semver $npm_package_version -i patch) && pnpm publish --tag latest && git push"
   },
   "keywords": [],
   "author": "",
