@@ -1,5 +1,4 @@
 {
-    "ports": [8081],
     "workloads": [
         { 
             "name": "charts-chartjs",

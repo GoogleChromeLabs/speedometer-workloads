@@ -17,7 +17,8 @@
     "format": "npm run pretty:fix && npm run lint:fix",
     "build": "rollup -c --bundleConfigAsCjs",
     "build:apps": "node scripts/build.js --type='static'",
-    "move": "node scripts/move.js --data='./workloads.config.folder.json'"
+    "move:default": "node scripts/move.js --data='./workloads.config.folder.json'",
+    "move:custom": "node scripts/move.js"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
