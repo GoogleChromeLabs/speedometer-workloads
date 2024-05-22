@@ -21,6 +21,7 @@
     "move:custom": "node scripts/move.js"
   },
   "devDependencies": {
+    "chalk": "4.1.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "fs-extra": "^11.1.1",
@@ -29,10 +30,5 @@
     "rollup": "^3.23.0",
     "rollup-copy-files": "workspace:*",
     "rollup-plugin-cleaner": "^1.0.0"
-  },
-  "dependencies": {
-    "chalk": "4.1.2",
-    "express": "^4.19.2",
-    "vhost": "^3.0.2"
   }
 }
