@@ -15,16 +15,18 @@ importers:
 
   .:
     dependencies:
-      semver:
-        specifier: ^7.6.2
-        version: 7.6.2
-    devDependencies:
+      chalk:
+        specifier: 4.1.2
+        version: 4.1.2
       fs-extra:
         specifier: ^10.1.0
         version: 10.1.0
       globby:
         specifier: ^11.1.0
         version: 11.1.0
+      semver:
+        specifier: ^7.6.2
+        version: 7.6.2
 
   apps/charts/charts-chartjs:
     dependencies:
@@ -16000,7 +16002,6 @@ packages:
       graceful-fs: 4.2.11
       jsonfile: 6.1.0
       universalify: 2.0.1
-    dev: true
 
   /fs-extra@11.2.0:
     resolution: {integrity: sha512-PmDi3uwK5nFuXh7XDTlVnS17xJS7vW36is2+w3xcv8SVxiB4NyATf4ctkVY5bkSjX0Y4nbvZCq1/EjtEyr9ktw==}
@@ -18841,7 +18842,6 @@ packages:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
-    dev: true
 
   /jsonparse@1.3.1:
     resolution: {integrity: sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==}
@@ -26666,7 +26666,6 @@ packages:
   /universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
-    dev: true
 
   /unocss@0.59.4(postcss@8.4.38)(vite@5.2.10):
     resolution: {integrity: sha512-QmCVjRObvVu/gsGrJGVt0NnrdhFFn314BUZn2WQyXV9rIvHLRmG5bIu0j5vibJkj7ZhFchTrnTM1pTFXP1xt5g==}

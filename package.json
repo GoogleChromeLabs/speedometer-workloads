@@ -22,14 +22,6 @@
     "packages/styles/*",
     "packages/*"
   ],
-  "devDependencies": {
-    "fs-extra": "^10.1.0",
-    "globby": "^11.1.0"
-  },
-  "peerDependencies": {
-    "fs-extra": "^10.1.0",
-    "globby": "^11.1.0"
-  },
   "pnpm": {
     "overrides": {
       "postcss@<8.4.31": ">=8.4.31",
@@ -40,6 +32,9 @@
     }
   },
   "dependencies": {
+    "chalk": "4.1.2",
+    "fs-extra": "^10.1.0",
+    "globby": "^11.1.0",
     "semver": "^7.6.2"
   }
 }
