@@ -13,6 +13,9 @@ const staticConfig = {
     assetPrefix: "./",
     images: {
         unoptimized: true,
+    },
+    env: {
+        TARGET: "static"
     }
 };
 
@@ -22,6 +25,9 @@ const staticWithBaseConfig = {
     assetPrefix: "./",
     images: {
         unoptimized: true,
+    },
+    env: {
+        TARGET: "static"
     },
     basePath: process.env.BASE
 };
